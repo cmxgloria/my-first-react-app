@@ -78,11 +78,12 @@ function square(props){
       this.setState({
         stepNumber: step,
         xIsNext: (step % 2) === 0,
-      });
+        stepNumber: history.length,
+            });
     }
     render() {
-      const histroy = this.state.history;
-      const current = history[history.length-1];
+      const histroy = this.state.history.slice(0,this.state.stepNumber + 1);
+      const current = history[this.state.stepNumber];
       const winner = calculateWinner(current.squares);
       const moves = history.map((step, move) => {
         const desc = move ?
