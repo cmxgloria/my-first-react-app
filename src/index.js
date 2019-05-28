@@ -57,6 +57,7 @@ function square(props){
         history: [{
           square: Array(9).fill(null),
         }],
+        stepNumber: 0,
         xIsNext: true,
       }
     }
@@ -73,6 +74,11 @@ function square(props){
       }]),
       xIsNext= !this.state.xIsNext,
     });
+    jumpTo(step) {
+      this.setState({
+        stepNumber: step,
+        xIsNext: (step % 2) === 0,
+      });
     }
     render() {
       const histroy = this.state.history;
@@ -111,6 +117,13 @@ function square(props){
       );
     }
   }
+  
+  // ========================================
+  
+  ReactDOM.render(
+    <Game />,
+    document.getElementById('root')
+  );
   function calculateWinner(squares) {
     const lines = [
       [0, 1, 2],
@@ -130,10 +143,3 @@ function square(props){
     }
     return null;
   }
-  // ========================================
-  
-  ReactDOM.render(
-    <Game />,
-    document.getElementById('root')
-  );
-  
