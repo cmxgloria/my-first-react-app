@@ -38,6 +38,8 @@ We recommend following these instructions to configure syntax highlighting for y
 https://cors-anywhere.herokuapp.com
 This API enables cross-origin requests to anywhere, like some public API doesnt allow to be used in the local host then we can use this website to solve out.
 
+````````
+https://explainshell.com/explain?cmd=rm+-rf
 
 
 
