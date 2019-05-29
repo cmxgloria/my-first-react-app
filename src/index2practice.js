@@ -48,4 +48,4 @@ class Game extends React.Component{
         );
     }
 }
-ReactDom.render(<Game />, getElementByID('root');)
+ReactDom.render(<Game />, getElementByID('root'));
