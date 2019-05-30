@@ -4,7 +4,7 @@ This setup requires more work but allows you to complete the tutorial using an e
 
 Make sure you have a recent version of Node.js installed.
 Follow the installation instructions for Create React App to make a new project.
-npx create-react-app my-app
+```npx create-react-app my-app```
 Delete all files in the src/ folder of the new project
 Note:
 
